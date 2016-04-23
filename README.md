@@ -37,3 +37,8 @@ php artisan make:model Book
 php artisan serve --port=8000
 ```
 
+### Books API Endpoint
+
+http://localhost:8000/api/v1/books
+
+

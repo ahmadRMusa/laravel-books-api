@@ -58,7 +58,7 @@
                         <div class="form-group">
                             <label for="title" class="col-sm-3 control-label">Title</label>
                             <div class="col-sm-9">
-                                <input type="email" class="form-control" id="title" name="title"
+                                <input type="title" class="form-control" id="title" name="title"
                                        placeholder="Title" value="{{title}}"
                                        ng-model="book.title" ng-required="true">
                                         <span class="help-inline"
