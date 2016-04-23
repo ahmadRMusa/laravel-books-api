@@ -6,20 +6,15 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "angular-fontawesome": "0.4.0",
-    "angular-loader": "1.4.10",
-    "angular-loading-bar": "0.8.0",
-    "angular-messages": "1.4.10",
     "angular-mocks": "1.4.10",
-    "angular-resource": "1.4.10",
-    "angular-sanitize": "1.4.10",
-    "angular-toastr": "1.4.1",
     "jquery": "2.1.4",
-    "lodash": "4.6.1",
-    "ui-router": "0.2.18",
-    "ui-select": "angular-ui-select#0.12.1",
     "bootstrap": "3.3.6",
     "angular-bootstrap": "1.0.3",
-    "angular": "1.4.9"
+    "angular": "1.4.9",
+    "angular-animate": "^1.5.5",
+    "angular-route": "^1.5.5"
+  },
+  "resolutions": {
+    "angular": "1.5.5"
   }
 }
