@@ -16,6 +16,10 @@ elixir(function(mix) {
         'app.scss',
         'controllers.scss'
     ], 'public/assets/css');
-    mix.scripts(['app.js', 'controllers/controllers.js'], 'public/js/app.js')
-        .scripts(['forum.js', 'threads.js'], 'public/js/forum.js');
+    mix.scripts(['app.js', 'controllers/books.js'], 'public/js/app.js')
+        .scripts([
+            'vendor/angular/angular.js',
+            'vendor/jquery/dist/jquery.js',
+            'vendor/bootstrap/dist/js/bootstrap.js'
+        ], 'public/js/vendor.js');
 });
