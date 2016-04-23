@@ -4,7 +4,7 @@
     <title>Laravel API Books CRUD</title>
 
     <!-- Load Bootstrap CSS -->
-    <!--    <link href="--><?//= asset('css/bootstrap.min.css') ?><!--" rel="stylesheet">-->
+    <link href="<?= asset('assets/css/app.css') ?>" rel="stylesheet">
 </head>
 <body>
 <h2>Books Database</h2>
@@ -115,3 +115,8 @@
 
 </body>
 </html>
+
+<?php
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+?>
