@@ -31,3 +31,9 @@ php artisan make:controller Books
 php artisan make:model Book
 ```
 
+### Use built-in web server for Laravel App (http://localhost:8000)
+
+```shell
+php artisan serve --port=8000
+```
+
