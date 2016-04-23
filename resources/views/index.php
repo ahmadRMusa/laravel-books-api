@@ -108,10 +108,10 @@
 </div>
 
 <!-- Load Javascript Libraries (AngularJS, JQuery, Bootstrap) -->
-<script src="<?= asset('js/vendor.js') ?>"></script>
+<script src="<?= asset('assets/js/vendor.js') ?>"></script>
 
 <!-- AngularJS Application Scripts -->
-<script src="<?= asset('app.js') ?>"></script>
+<script src="<?= asset('assets/js/app.js') ?>"></script>
 
 </body>
 </html>
