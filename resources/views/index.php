@@ -108,12 +108,10 @@
 </div>
 
 <!-- Load Javascript Libraries (AngularJS, JQuery, Bootstrap) -->
-<!--<script src="--><?//= asset('app/lib/angular/angular.min.js') ?><!--"></script>-->
-<!--<script src="--><?//= asset('js/jquery.min.js') ?><!--"></script>-->
-<!--<script src="--><?//= asset('js/bootstrap.min.js') ?><!--"></script>-->
+<script src="<?= asset('js/vendor.js') ?>"></script>
 
 <!-- AngularJS Application Scripts -->
-<!--<script src="--><?//= asset('app/app.js') ?><!--"></script>-->
-<!--<script src="--><?//= asset('app/controllers/employees.js') ?><!--"></script>-->
+<script src="<?= asset('app.js') ?>"></script>
+
 </body>
 </html>

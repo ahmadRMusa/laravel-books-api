@@ -7,3 +7,5 @@ Homestead.json
 .idea/
 _ide_helper.php
 /resources/assets/js/vendor
+/public/assets/css/*
+/public/assets/js/*
