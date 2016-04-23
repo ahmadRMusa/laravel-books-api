@@ -18,17 +18,25 @@ class CORS {
 
         // ALLOW OPTIONS METHOD
         $headers = [
-            'Access-Control-Allow-Methods'=> 'POST, GET, OPTIONS, PUT, DELETE',
-            'Access-Control-Allow-Headers'=> 'Content-Type, X-Auth-Token, Origin'
+            'Access-Control-Allow-Origin' => '*',
+            'Access-Control-Allow-Methods' => 'POST, GET, OPTIONS, PUT, DELETE',
+            'Access-Control-Allow-Headers' => 'Origin, Content-Type, Accept, Authorization, X-Request-With,X-Auth-Token',
+            'Access-Control-Allow-Credentials' => 'true',
+            //'Access-Control-Allow-Methods'=> 'POST, GET, OPTIONS, PUT, DELETE',
+            //'Access-Control-Allow-Headers'=> 'Content-Type, X-Auth-Token, Origin'
         ];
+
         if($request->getMethod() == "OPTIONS") {
             // The client-side application can set only headers allowed in Access-Control-Allow-Headers
             return Response::make('OK', 200, $headers);
         }
 
         $response = $next($request);
-        foreach($headers as $key => $value)
+
+        foreach($headers as $key => $value) {
             $response->header($key, $value);
+        }
+
         return $response;
     }
 
