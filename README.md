@@ -37,6 +37,14 @@ php artisan make:model Book
 php artisan serve --port=8000
 ```
 
+### Elixir and Gulp
+
+When making changes to JS files , run gulp in order to get the latest changes in the front-end assets
+
+```shell
+gulp
+```
+
 ### Books API Endpoint
 
 http://localhost:8000/api/v1/books

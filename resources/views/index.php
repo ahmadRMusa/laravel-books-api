@@ -26,10 +26,10 @@
         </thead>
         <tbody>
         <tr ng-repeat="book in books">
-            <td>{{  employee.id }}</td>
-            <td>{{ employee.title }}</td>
-            <td>{{ employee.author }}</td>
-            <td>{{ employee.description }}</td>
+            <td>{{  book.id }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.description }}</td>
             <td>
                 <button class="btn btn-default btn-xs btn-detail" ng-click="toggle('edit', book.id)">
                     Edit

@@ -2,6 +2,7 @@ app.controller('booksController', function($scope, $http, API_URL) {
     //retrieve books from API
     $http.get(API_URL + "books")
         .success(function(response) {
+            console.debug(response);
             $scope.books = response;
         });
 
