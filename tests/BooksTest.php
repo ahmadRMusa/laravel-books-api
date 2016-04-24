@@ -1,58 +1,49 @@
- <?php
+<?php
 
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
- /**
-  * Class BooksTest
-  */
-class BooksTest extends ApiTester {
+/**
+ * Class BooksTest
+ */
+class BooksTest extends TestCase {
 
     /** @test */
     public function it_fetches_books() {
-        //arrange
-        $this->times(5)->make('App\Book');
-
-        //act
-        $this->getJson('api/v1/books');
-
-        //assert
-        $this->assertResponseOk();
+        $this->json('GET', '/api/v1/books')
+            ->seeJsonStructure([
+                '*' => [
+                    'id', 'title','author','description','created_at','updated_at'
+                ]
+            ]);
     }
 
     /** @test */
-    public function it_fetches_a_single_book() {
-        $this->make('App\Book');
-
-        $book = $this->getJson('api/v1/books/1')->data;
-
-        $this->assertResponseOk();
-
-        $this->assertObjectHasAttributes(
-            $book,
-            'title',
-            'author',
-            'description',
-            'reference',
-            'publication_date'
-        );
-    }
-
-    /** @test */
-    public function it_creates_a_new_book_given_parameters() {
-        //Must authorize
-        $this->getJson('api/v1/books', 'POST', $this->getStub());
-        $this->assertResponseStatus(201);
-    }
+//    public function it_fetches_a_single_book() {
+//        $this->make('App\Book');
+//
+//        $book = $this->getJson('api/v1/books/1')->data;
+//
+//        $this->assertResponseOk();
+//
+//        $this->assertObjectHasAttributes(
+//            $book,
+//            'title',
+//            'author',
+//            'description',
+//            'reference',
+//            'publication_date'
+//        );
+//    }
 
     /**
      *
-     * Generate stub
+     * Get Book attributes for validating JSON
      *
      * @return array
      */
-    protected function getStub() {
+    protected function getBookJSONStruct() {
         return [
             'title' => $this->fake->sentence,
             'author' => $this->fake->sentence,

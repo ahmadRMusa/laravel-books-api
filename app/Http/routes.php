@@ -19,10 +19,3 @@ Route::get('/api/v1/books/{id?}', 'Books@index');
 Route::post('/api/v1/books', 'Books@store');
 Route::post('/api/v1/books/{id}', 'Books@update');
 Route::delete('/api/v1/books/{id}', 'Books@destroy');
-
-/**
- * Route::get('/api/v1/books', array('middleware' => 'cors', 'uses' => 'Books@index'));
- * Route::post('/api/v1/books/{id}', array('middleware' => 'cors', 'uses' => 'Books@store'));
- * Route::post('/api/v1/books/{id}', array('middleware' => 'cors', 'uses' => 'Books@update'));
- * Route::delete('/api/v1/books/{id}', array('middleware' => 'cors', 'uses' => 'Books@destroy'));
- */
