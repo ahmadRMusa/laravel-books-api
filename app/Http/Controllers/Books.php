@@ -33,6 +33,8 @@ class Books extends Controller
         $book->title = $request->input('title');
         $book->author = $request->input('author');
         $book->description = $request->input('description');
+        $book->reference = $request->input('description');
+        $book->publicationDate = $request->input('publication_date');
         $book->save();
 
         return 'Book record successfully created with id ' . $book->id;
@@ -61,21 +63,23 @@ class Books extends Controller
         $book->title = $request->input('title');
         $book->author = $request->input('author');
         $book->description = $request->input('description');
+        $book->reference = $request->input('reference');
+        $book->publicationDate = $request->input('publication_date');
         $book->save();
 
         return "Successfully updated book #" . $book->id;
     }
 
     /**
+     *
      * Remove the specified book resource from the database.
      *
-     * @param  $request Request
-     * @return Response
+     * @param $id
+     * @return string
      */
-    public function destroy(Request $request) {
-        $book = Book::find($request->input('id'));
+    public function destroy($id) {
+        $book = Book::find($id);
         $book->delete();
-
-        return "Successfully deleted book #" . $request->input('id');
+        return "Successfully deleted book #" . $id;
     }
 }

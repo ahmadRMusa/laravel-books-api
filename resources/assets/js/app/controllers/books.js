@@ -55,7 +55,7 @@ app.controller('booksController', function($scope, $http, API_URL) {
 
     //delete record
     $scope.confirmDelete = function(id) {
-        var isConfirmDelete = confirm('Are you sure you want this record?');
+        var isConfirmDelete = confirm('Are you sure you want to delete this record?');
         if (isConfirmDelete) {
             $http({
                 method: 'DELETE',

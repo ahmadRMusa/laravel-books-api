@@ -2,6 +2,16 @@
 
 Books API Built in Laravel 5 and using AngularJS for front-end
 
+### Setup application and test
+
+```shell
+npm install -g gulp
+php artisan migrate:refresh --seed
+gulp
+php artisan serve --port=8000
+phpunit
+```
+
 ### Create Laravel 5 project with the following command:
 
 ```shell
@@ -9,15 +19,16 @@ composer create-project laravel/laravel ~/projects/github/bitclaw/laravel-books-
 php artisan ide-helper:generate
 ```
 
-### Commands to get database and migrations setup
+### Commands to get database and migrations / seeds setup
 
 ```shell
 mysql> CREATE DATABASE `books-api` /*!40100 COLLATE 'utf8_general_ci' */;
-
 php artisan migrate:install
 php artisan make:migration create_books_table
 php artisan make:seeder BooksTableSeeder
 php artisan migrate
+php artisan db:seed --class=BooksTableSeeder
+php artisan migrate:refresh --seed
 ```
 
 ### Create controller
@@ -50,4 +61,35 @@ gulp
 
 http://localhost:8000/api/v1/books
 
+### Unit tests
+
+Simply run the following command from the shell in the project root directory:
+
+```shell
+phpunit
+```
+
+### LICENSE
+
+> The MIT License (MIT)
+> 
+> Copyright (c) 2016 Daniel Chavez
+> 
+> Permission is hereby granted, free of charge, to any person obtaining a copy
+> of this software and associated documentation files (the "Software"), to deal
+> in the Software without restriction, including without limitation the rights
+> to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+> copies of the Software, and to permit persons to whom the Software is
+> furnished to do so, subject to the following conditions:
+> 
+> The above copyright notice and this permission notice shall be included in all
+> copies or substantial portions of the Software.
+> 
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+> SOFTWARE.
 
