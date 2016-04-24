@@ -16,6 +16,7 @@ mysql> CREATE DATABASE `books-api` /*!40100 COLLATE 'utf8_general_ci' */;
 
 php artisan migrate:install
 php artisan make:migration create_books_table
+php artisan make:seeder BooksTableSeeder
 php artisan migrate
 ```
 
