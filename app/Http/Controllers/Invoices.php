@@ -9,7 +9,7 @@ use App\Http\Requests;
 class Invoices extends Controller
 {
     /**
-     * Display book resource.
+     * Display invoice resource.
      *
      * @return Response
      */
@@ -58,7 +58,7 @@ class Invoices extends Controller
     }
 
     /**
-     * Display the specified book resource.
+     * Display the specified invoice resource.
      *
      * @param  int  $id
      * @return Response
