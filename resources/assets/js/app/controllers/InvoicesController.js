@@ -11,7 +11,7 @@
         $http.get(API_URL + "invoices")
             .success(function(response) {
                 console.debug(response);
-                $scope.books = response;
+                $scope.invoices = response;
             });
 
         //show modal form

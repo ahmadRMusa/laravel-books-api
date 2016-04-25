@@ -28,18 +28,18 @@ class Invoices extends Controller
      * @return Response
      */
     public function store(Request $request) {
-        $book = new Book;
+        $invoice = new Invoice;
 
-        $book->title = $request->input('title');
-        $book->author = $request->input('author');
-        $book->description = $request->input('description');
-        $book->reference = $request->input('description');
-        $book->publication = $request->input('publication');
-        $book->price = $request->input('price');
-        $book->quantity = $request->input('quantity');
-        $book->save();
+        $invoice->title = $request->input('title');
+        $invoice->author = $request->input('author');
+        $invoice->description = $request->input('description');
+        $invoice->reference = $request->input('description');
+        $invoice->publication = $request->input('publication');
+        $invoice->price = $request->input('price');
+        $invoice->quantity = $request->input('quantity');
+        $invoice->save();
 
-        return 'Book record successfully created with id ' . $book->id;
+        return 'Book record successfully created with id ' . $invoice->id;
     }
 
     /**

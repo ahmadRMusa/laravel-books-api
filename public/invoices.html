@@ -15,7 +15,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="book in books">
+        <tr ng-repeat="invoice in invoices">
             <td>{{ invoice.id }}</td>
             <!--            <td>{{ invoice.title }}</td>-->
             <td>{{ invoice.amount }}</td>
@@ -38,7 +38,7 @@
                     <form name="frmInvoices" class="form-horizontal" novalidate="">
 
                         <div class="form-group">
-                            <label for="title" class="col-sm-3 control-label">Title</label>
+                            <label for="amount" class="col-sm-3 control-label">Title</label>
                             <div class="col-sm-9">
                                 <input type="title" class="form-control" id="amount" name="amount"
                                        placeholder="Amount" value="{{amount}}"
@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="form-group error">
-                            <label for="author" class="col-sm-3 control-label">Author</label>
+                            <label for="quantity" class="col-sm-3 control-label">Author</label>
                             <div class="col-sm-9">
                                 <input type="text" class="form-control has-error" id="quantity" name="quantity"
                                        placeholder="Quantity" value="{{quantity}}"
