@@ -9,6 +9,6 @@ class Invoice extends Model
     protected $fillable = [
         'id',
         'amount',
-        'quantity',
+        'qty',
     ];
 }

@@ -14,7 +14,7 @@ class InvoicesTest extends TestCase {
         $this->json('GET', '/api/v1/invoices')
             ->seeJsonStructure([
                 '*' => [
-                    'id', 'amount','created_at','quantity','updated_at'
+                    'id', 'amount','created_at','qty','updated_at'
                 ]
             ]);
     }
@@ -25,7 +25,7 @@ class InvoicesTest extends TestCase {
             ->seeJsonStructure([
                 'id',
                 'amount',
-                'quantity',
+                'qty',
                 'updated_at'
             ]);
     }

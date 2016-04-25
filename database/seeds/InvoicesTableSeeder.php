@@ -14,7 +14,7 @@ class InvoicesTableSeeder extends Seeder
         DB::table('invoices')->insert([
             'book_id' => 1,
             'amount' => '5.99',
-            'quantity' => 1,
+            'qty' => 1,
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
@@ -22,7 +22,7 @@ class InvoicesTableSeeder extends Seeder
         DB::table('invoices')->insert([
             'book_id' => 2,
             'amount' => '6.99',
-            'quantity' => 1,
+            'qty' => 1,
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
@@ -30,7 +30,7 @@ class InvoicesTableSeeder extends Seeder
         DB::table('invoices')->insert([
             'book_id' => 3,
             'amount' => '7.99',
-            'quantity' => 1,
+            'qty' => 1,
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
@@ -38,7 +38,7 @@ class InvoicesTableSeeder extends Seeder
         DB::table('invoices')->insert([
             'book_id' => 4,
             'amount' => '8.99',
-            'quantity' => 1,
+            'qty' => 1,
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
@@ -46,7 +46,7 @@ class InvoicesTableSeeder extends Seeder
         DB::table('invoices')->insert([
             'book_id' => 5,
             'amount' => '9.99',
-            'quantity' => 1,
+            'qty' => 1,
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);

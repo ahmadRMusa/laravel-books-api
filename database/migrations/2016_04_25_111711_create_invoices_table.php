@@ -17,7 +17,7 @@ class CreateInvoicesTable extends Migration
             $table->integer('book_id')->unsigned();
             $table->foreign('book_id')->references('id')->on('books');
             $table->decimal('amount', 12 , 4);
-            $table->integer('quantity')->unsigned();
+            $table->integer('qty')->unsigned();
             $table->timestamps();
         });
     }

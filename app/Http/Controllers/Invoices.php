@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Invoice;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use DB;
 
 class Invoices extends Controller
 {
@@ -15,7 +16,22 @@ class Invoices extends Controller
      */
     public function index($id = null) {
         if ($id == null) {
-            return Invoice::orderBy('id', 'asc')->get();
+            $invoices = Invoice
+                ::join('books', 'invoices.book_id', '=', 'books.id')
+                ->select(
+                    'invoices.id',
+                    'invoices.amount',
+                    'invoices.qty',
+                    'invoices.created_at',
+                    'invoices.updated_at',
+                    'books.title',
+                    'books.author',
+                    'books.price',
+                    'books.quantity'
+                )
+                ->getQuery()
+                ->get();
+            return $invoices;
         } else {
             return $this->show($id);
         }
@@ -36,7 +52,7 @@ class Invoices extends Controller
         $invoice->reference = $request->input('description');
         $invoice->publication = $request->input('publication');
         $invoice->price = $request->input('price');
-        $invoice->quantity = $request->input('quantity');
+        $invoice->qty = $request->input('qty');
         $invoice->save();
 
         return 'Book record successfully created with id ' . $invoice->id;
