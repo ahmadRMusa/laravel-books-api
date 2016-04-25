@@ -34,7 +34,9 @@ class Books extends Controller
         $book->author = $request->input('author');
         $book->description = $request->input('description');
         $book->reference = $request->input('description');
-        $book->publicationDate = $request->input('publication_date');
+        $book->publication = $request->input('publication');
+        $book->price = $request->input('price');
+        $book->quantity = $request->input('quantity');
         $book->save();
 
         return 'Book record successfully created with id ' . $book->id;
@@ -64,7 +66,9 @@ class Books extends Controller
         $book->author = $request->input('author');
         $book->description = $request->input('description');
         $book->reference = $request->input('reference');
-        $book->publicationDate = $request->input('publication_date');
+        $book->publication = $request->input('publication');
+        $book->price = $request->input('price');
+        $book->quantity = $request->input('quantity');
         $book->save();
 
         return "Successfully updated book #" . $book->id;

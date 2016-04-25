@@ -10,7 +10,7 @@ php artisan migrate:refresh --force
 php artisan db:seed --class=BooksTableSeeder
 gulp
 php artisan serve --port=8000
-phpunit
+vendor/bin/phpunit
 ```
 
 ### Create Laravel 5 project with the following command:

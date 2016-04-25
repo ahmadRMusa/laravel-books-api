@@ -16,7 +16,7 @@ class BooksTableSeeder extends Seeder
             'author' => 'Stephen King',
             'description' => 'Horror',
             'reference' => 'Books',
-            'publication_year' => '2016',
+            'publication' => '2016',
             'price' => '5.99',
             'quantity' => '10',
         ]);
@@ -26,7 +26,7 @@ class BooksTableSeeder extends Seeder
             'author' => 'Augusten Burroughs',
             'description' => 'Romance',
             'reference' => 'Books',
-            'publication_year' => '2016',
+            'publication' => '2016',
             'price' => '6.99',
             'quantity' => '10',
         ]);
@@ -36,7 +36,7 @@ class BooksTableSeeder extends Seeder
             'author' => 'Hope Jahren',
             'description' => 'Comedy',
             'reference' => 'Books',
-            'publication_year' => '2016',
+            'publication' => '2016',
             'price' => '7.99',
             'quantity' => '10',
         ]);
@@ -46,7 +46,7 @@ class BooksTableSeeder extends Seeder
             'author' => 'L.S. Hilton',
             'description' => 'Romance',
             'reference' => 'Books',
-            'publication_year' => '2016',
+            'publication' => '2016',
             'price' => '8.99',
             'quantity' => '10',
         ]);
@@ -56,7 +56,7 @@ class BooksTableSeeder extends Seeder
             'author' => 'William Beverly',
             'description' => 'Action',
             'reference' => 'Books',
-            'publication_year' => '2016',
+            'publication' => '2016',
             'price' => '9.99',
             'quantity' => '10',
         ]);
@@ -66,7 +66,7 @@ class BooksTableSeeder extends Seeder
             'author' => 'Grant Morrison',
             'description' => 'Action',
             'reference' => 'Books',
-            'publication_year' => '2016',
+            'publication' => '2016',
             'price' => '10.99',
             'quantity' => '10',
         ]);
@@ -76,7 +76,7 @@ class BooksTableSeeder extends Seeder
             'author' => 'Brian K. Vaughan',
             'description' => 'Romance',
             'reference' => 'Books',
-            'publication_year' => '2016',
+            'publication' => '2016',
             'price' => '11.99',
             'quantity' => '10',
         ]);
@@ -86,7 +86,7 @@ class BooksTableSeeder extends Seeder
             'author' => 'Geoff Johns',
             'description' => 'Action',
             'reference' => 'Books',
-            'publication_year' => '2016',
+            'publication' => '2016',
             'price' => '12.99',
             'quantity' => '10',
         ]);
@@ -96,7 +96,7 @@ class BooksTableSeeder extends Seeder
             'author' => 'Kengo Hanzawa',
             'description' => 'Heroe',
             'reference' => 'Books',
-            'publication_year' => '2016',
+            'publication' => '2016',
             'price' => '13.99',
             'quantity' => '10',
         ]);
@@ -106,7 +106,7 @@ class BooksTableSeeder extends Seeder
             'author' => 'Kazu Kibuishi',
             'description' => 'Horror',
             'reference' => 'Books',
-            'publication_year' => '2016',
+            'publication' => '2016',
             'price' => '14.99',
             'quantity' => '10',
         ]);
