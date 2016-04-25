@@ -1,2 +1,19 @@
-var app = angular.module('bookRecords', [])
-    .constant('API_URL', 'http://localhost:8000/api/v1/');
+(function(){
+
+    var app = angular.module("bookRecords",["ngRoute"]);
+
+    app.config(function($routeProvider){
+
+        $routeProvider
+            .when("/books",{
+                templateUrl: "books.html",
+                controller: "BooksController"
+            })
+            .when("/invoices",{
+                templateUrl: "invoices.html",
+                controller: "InvoicesController"
+            })
+            .otherwise({redirectTo:"/"});
+    });
+
+}());

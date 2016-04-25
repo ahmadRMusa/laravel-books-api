@@ -19,6 +19,7 @@ elixir(function(mix) {
         .scripts([
             'vendor/angular/angular.js',
             'vendor/jquery/dist/jquery.js',
-            'vendor/bootstrap/dist/js/bootstrap.js'
+            'vendor/bootstrap/dist/js/bootstrap.js',
+            'vendor/angular-route/angular-route.js'
         ], 'public/assets/js/vendor.js');
 });
