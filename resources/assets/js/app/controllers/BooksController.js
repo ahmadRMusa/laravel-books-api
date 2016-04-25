@@ -5,12 +5,11 @@
 
     var BooksController = function($scope ,$http , $routeParams , API_URL){
 
-        $scope.onlyNumbers = /^[1-9][0-9]*$/;
+        $scope.onlyNumbers = /^(?:[1-9]\d*|0)?(?:\.\d+)?$/;
 
         //retrieve books from API
         $http.get(API_URL + "books")
             .success(function(response) {
-                console.debug(response);
                 $scope.books = response;
             });
 
@@ -28,7 +27,7 @@
                     $http.get(API_URL + 'books/' + id)
                         .success(function(response) {
                             console.log(response);
-                            $scope.employee = response;
+                            $scope.book = response;
                         });
                     break;
                 default:
