@@ -15,7 +15,7 @@ elixir(function(mix) {
     mix.sass([
         'app.scss'
     ], 'public/assets/css');
-    mix.scripts(['app/app.js', 'app/controllers/books.js'], 'public/assets/js/app.js')
+    mix.scripts(['app/app.js', 'app/controllers/BooksController.js'], 'public/assets/js/app.js')
         .scripts([
             'vendor/angular/angular.js',
             'vendor/jquery/dist/jquery.js',
