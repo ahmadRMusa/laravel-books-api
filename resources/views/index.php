@@ -8,7 +8,7 @@
 </head>
 <body>
 <h2>Books Database</h2>
-<div  ng-controller="booksController">
+<div  ng-controller="BooksController">
 
     <!-- Table-to-load-the-data Part -->
     <table class="table">
