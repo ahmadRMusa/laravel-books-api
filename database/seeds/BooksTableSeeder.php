@@ -17,6 +17,8 @@ class BooksTableSeeder extends Seeder
             'description' => 'Horror',
             'reference' => 'Books',
             'publication_year' => '2016',
+            'price' => '5.99',
+            'quantity' => '10',
         ]);
 
         DB::table('books')->insert([
@@ -25,6 +27,8 @@ class BooksTableSeeder extends Seeder
             'description' => 'Romance',
             'reference' => 'Books',
             'publication_year' => '2016',
+            'price' => '6.99',
+            'quantity' => '10',
         ]);
 
         DB::table('books')->insert([
@@ -33,6 +37,8 @@ class BooksTableSeeder extends Seeder
             'description' => 'Comedy',
             'reference' => 'Books',
             'publication_year' => '2016',
+            'price' => '7.99',
+            'quantity' => '10',
         ]);
 
         DB::table('books')->insert([
@@ -41,6 +47,8 @@ class BooksTableSeeder extends Seeder
             'description' => 'Romance',
             'reference' => 'Books',
             'publication_year' => '2016',
+            'price' => '8.99',
+            'quantity' => '10',
         ]);
 
         DB::table('books')->insert([
@@ -49,6 +57,8 @@ class BooksTableSeeder extends Seeder
             'description' => 'Action',
             'reference' => 'Books',
             'publication_year' => '2016',
+            'price' => '9.99',
+            'quantity' => '10',
         ]);
 
         DB::table('books')->insert([
@@ -57,6 +67,8 @@ class BooksTableSeeder extends Seeder
             'description' => 'Action',
             'reference' => 'Books',
             'publication_year' => '2016',
+            'price' => '10.99',
+            'quantity' => '10',
         ]);
 
         DB::table('books')->insert([
@@ -65,6 +77,8 @@ class BooksTableSeeder extends Seeder
             'description' => 'Romance',
             'reference' => 'Books',
             'publication_year' => '2016',
+            'price' => '11.99',
+            'quantity' => '10',
         ]);
 
         DB::table('books')->insert([
@@ -73,6 +87,8 @@ class BooksTableSeeder extends Seeder
             'description' => 'Action',
             'reference' => 'Books',
             'publication_year' => '2016',
+            'price' => '12.99',
+            'quantity' => '10',
         ]);
 
         DB::table('books')->insert([
@@ -81,6 +97,8 @@ class BooksTableSeeder extends Seeder
             'description' => 'Heroe',
             'reference' => 'Books',
             'publication_year' => '2016',
+            'price' => '13.99',
+            'quantity' => '10',
         ]);
 
         DB::table('books')->insert([
@@ -89,6 +107,8 @@ class BooksTableSeeder extends Seeder
             'description' => 'Horror',
             'reference' => 'Books',
             'publication_year' => '2016',
+            'price' => '14.99',
+            'quantity' => '10',
         ]);
     }
 }
