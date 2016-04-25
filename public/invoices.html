@@ -8,8 +8,10 @@
             <!--            <th>Book name</th>-->
             <th>Amount</th>
             <th>Quantity Sold</th>
+            <th>Created</th>
+            <th>Updated</th>
             <th><button id="btn-add" class="btn btn-primary btn-xs" ng-click="toggle('add', 0)">
-                Add New Book
+                Purchase book
             </button>
             </th>
         </tr>
@@ -20,6 +22,8 @@
             <!--            <td>{{ invoice.title }}</td>-->
             <td>{{ invoice.amount }}</td>
             <td>{{ invoice.quantity }}</td>
+            <td>{{ invoice.created_at }}</td>
+            <td>{{ invoice.updated_at }}</td>
         </tr>
         </tbody>
     </table>
@@ -44,7 +48,7 @@
                                        placeholder="Amount" value="{{amount}}"
                                        ng-model="invoice.amount" ng-required="true">
                                         <span class="help-inline"
-                                              ng-show="frmBooks.amount.$invalid && frmBooks.amount.$touched">
+                                              ng-show="frmInvoices.amount.$invalid && frmInvoices.amount.$touched">
                                             Amount field is required
                                         </span>
                             </div>
@@ -57,7 +61,7 @@
                                        placeholder="Quantity" value="{{quantity}}"
                                        ng-model="book.quantity" ng-required="true">
                                         <span class="help-inline"
-                                              ng-show="frmBooks.quantity.$invalid && frmBooks.quantity.$touched">
+                                              ng-show="frmInvoices.quantity.$invalid && frmInvoices.quantity.$touched">
                                             Quantity field is required
                                         </span>
                             </div>
