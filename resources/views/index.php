@@ -131,8 +131,8 @@
                         <div class="form-group">
                             <label for="price" class="col-sm-3 control-label">Price</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="price" name="price" ng-pattern="onlyNumbers"
-                                       placeholder="Price" value="{{price}}"
+                                <input type="number" class="form-control" id="price" name="price" ng-pattern="onlyNumbers"
+                                       placeholder="Price" value="{{amount | currency}}"
                                        ng-model="book.price" ng-required="true">
                                     <span class="help-inline"
                                           ng-show="frmBooks.price.$invalid && frmBooks.price.$touched">
