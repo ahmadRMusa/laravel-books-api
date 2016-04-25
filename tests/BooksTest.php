@@ -31,4 +31,22 @@ class BooksTest extends TestCase {
                 'updated_at',
             ]);
     }
+
+    /** @test */
+    public function testCreateNewBook() {
+        //Must authorize
+        $this->post('api/v1/books', $this->getBook());
+        $this->assertResponseStatus(200);
+    }
+
+    protected function getBook() {
+        return [
+            'title' => 'TEST',
+            'author' => 'TEST',
+            'description' => 'TEST',
+            'publication' => 'TEST',
+            'price' => 1,
+            'quantity' => 1,
+        ];
+    }
 }
