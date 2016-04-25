@@ -13,6 +13,8 @@
             <th>Publication Year</th>
             <th>Price</th>
             <th>Quantity</th>
+            <th>Created</th>
+            <th>Updated</th>
             <th><button id="btn-add" class="btn btn-primary btn-xs" ng-click="toggle('add', 0)">
                 Add New Book
             </button>
@@ -29,6 +31,8 @@
             <td>{{ book.publication }}</td>
             <td>{{ book.price }}</td>
             <td>{{ book.quantity }}</td>
+            <td>{{ book.created_at }}</td>
+            <td>{{ book.updated_at }}</td>
             <td>
                 <button class="btn btn-default btn-xs btn-detail" ng-click="toggle('edit', book.id)">
                     Edit
