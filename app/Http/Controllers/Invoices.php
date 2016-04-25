@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Invoice;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use DB;
 
 class Invoices extends Controller
 {
@@ -15,7 +16,12 @@ class Invoices extends Controller
      */
     public function index($id = null) {
         if ($id == null) {
-            return Invoice::orderBy('id', 'asc')->get();
+            $invoices = Invoice
+                ::join('books', 'invoices.book_id', '=', 'books.id')
+                ->select('invoices.id', 'invoices.amount', 'invoices.quantity', 'invoices.created_at', 'invoices.updated_at')
+                ->getQuery()
+                ->get();
+            return $invoices;
         } else {
             return $this->show($id);
         }
