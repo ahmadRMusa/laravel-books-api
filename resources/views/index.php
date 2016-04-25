@@ -131,12 +131,12 @@
                         <div class="form-group">
                             <label for="price" class="col-sm-3 control-label">Price</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="price" name="price"
+                                <input type="text" class="form-control" id="price" name="price" ng-pattern="onlyNumbers"
                                        placeholder="Price" value="{{price}}"
                                        ng-model="book.price" ng-required="true">
                                     <span class="help-inline"
                                           ng-show="frmBooks.price.$invalid && frmBooks.price.$touched">
-                                        Book price field is required
+                                        Book price field is required and must be an integer greater than zero
                                     </span>
                             </div>
                         </div>

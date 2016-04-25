@@ -1,4 +1,7 @@
 app.controller('BooksController', function($scope, $http, API_URL) {
+
+    $scope.onlyNumbers = /^[1-9][0-9]*$/;
+
     //retrieve books from API
     $http.get(API_URL + "books")
         .success(function(response) {

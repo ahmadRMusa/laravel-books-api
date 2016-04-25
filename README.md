@@ -8,6 +8,7 @@ Books API Built in Laravel 5 and using AngularJS for front-end
 npm install -g gulp
 php artisan migrate:refresh --force
 php artisan db:seed --class=BooksTableSeeder
+php artisan db:seed --class=InvoicesTableSeeder
 gulp
 php artisan serve --port=8000
 vendor/bin/phpunit
@@ -27,8 +28,10 @@ mysql> CREATE DATABASE `books-api` /*!40100 COLLATE 'utf8_general_ci' */;
 php artisan migrate:install
 php artisan make:migration create_books_table
 php artisan make:seeder BooksTableSeeder
+php artisan make:seeder InvoicesTableSeeder
 php artisan migrate
 php artisan db:seed --class=BooksTableSeeder
+php artisan db:seed --class=InvoicesTableSeeder
 php artisan migrate:refresh --seed
 ```
 
