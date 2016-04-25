@@ -19,3 +19,6 @@ Route::get('/api/v1/books/{id?}', 'Books@index');
 Route::post('/api/v1/books', 'Books@store');
 Route::post('/api/v1/books/{id}', 'Books@update');
 Route::delete('/api/v1/books/{id}', 'Books@destroy');
+
+Route::get('/api/v1/invoices/{id?}', 'Invoices@index');
+Route::post('/api/v1/invoices', 'Invoices@store');
