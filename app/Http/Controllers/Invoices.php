@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Invoice;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use DB;
 
 class Invoices extends Controller
 {
