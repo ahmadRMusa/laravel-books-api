@@ -14,6 +14,7 @@ class CreateInvoicesTable extends Migration
     {
         Schema::create('invoices', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('book_id')->unsigned();
             $table->foreign('book_id')->references('id')->on('books');
             $table->decimal('amount', 12 , 4);
             $table->timestamps();

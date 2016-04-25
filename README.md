@@ -6,9 +6,8 @@ Books API Built in Laravel 5 and using AngularJS for front-end
 
 ```shell
 npm install -g gulp
-php artisan migrate:refresh
+php artisan migrate:refresh --force
 php artisan db:seed --class=BooksTableSeeder
-php artisan db:seed --class=InvoicesTableSeeder
 gulp
 php artisan serve --port=8000
 phpunit
