@@ -42,9 +42,9 @@
                     <form name="frmInvoices" class="form-horizontal" novalidate="">
 
                         <div class="form-group">
-                            <label for="books" class="col-sm-3 control-label">Select book</label>
+                            <label for="book_id" class="col-sm-3 control-label">Select book</label>
                             <div class="col-sm-9">
-                                <select name="books" id="books" ng-model="invoice.book_id">
+                                <select name="book_id" id="book_id" ng-model="invoice.book_id" ng-required="true">
                                     <option value="">---Please select---</option>
                                     <option ng-repeat="book in books" value="{{ book.id }}">
                                         {{ book.title }}
@@ -52,7 +52,7 @@
                                 </select>
 
                                 <span class="help-inline"
-                                      ng-show="frmInvoices.select.$invalid && frmInvoices.select.$touched">
+                                      ng-show="frmInvoices.book_id.$invalid && frmInvoices.book_id.$touched">
                                     Book is required
                                 </span>
                             </div>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" id="btn-save" ng-click="save(modalstate, id)"
-                            ng-disabled="frmBooks.$invalid">
+                            ng-disabled="frmInvoices.$invalid">
                         Purchase book
                     </button>
                 </div>
