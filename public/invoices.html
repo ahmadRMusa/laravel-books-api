@@ -52,7 +52,8 @@
                                 </select>
 
                                 <span class="help-inline"
-                                      ng-show="frmInvoices.book_id.$invalid && frmInvoices.book_id.$touched">
+                                      ng-show="frmInvoices.book_id.$invalid && frmInvoices.book_id.$touched
+                                       && frmInvoices.book_id.$dirty">
                                     Book is required
                                 </span>
                             </div>
