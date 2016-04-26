@@ -12,14 +12,12 @@
         //Retrieve invoices from API
         $http.get(API_URL + "invoices")
             .success(function(response) {
-                console.debug(response);
                 $scope.invoices = response;
             });
 
         //Retrieve books from API
         $http.get(API_URL + "books")
             .success(function(response) {
-                console.debug(response);
                 $scope.books = response;
             });
 

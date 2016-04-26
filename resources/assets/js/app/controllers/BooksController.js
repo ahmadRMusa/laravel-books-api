@@ -26,14 +26,12 @@
                     $scope.id = id;
                     $http.get(API_URL + 'books/' + id)
                         .success(function(response) {
-                            console.log(response);
                             $scope.book = response;
                         });
                     break;
                 default:
                     break;
             }
-            console.log(id);
             $('#myModal').modal('show');
         };
 
@@ -52,10 +50,8 @@
                 data: $.param($scope.book),
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             }).success(function(response) {
-                console.log(response);
                 location.reload();
             }).error(function(response) {
-                console.log(response);
                 alert('This is embarrassing. An error has occurred. Please check the log for details');
             });
         };
@@ -69,11 +65,9 @@
                     url: API_URL + 'books/' + id
                 }).
                     success(function(data) {
-                        console.log(data);
                         location.reload();
                     }).
                     error(function(data) {
-                        console.log(data);
                         alert('Unable to delete record');
                     });
             } else {
