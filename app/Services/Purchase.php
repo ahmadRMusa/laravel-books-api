@@ -14,12 +14,12 @@ class Purchase
     {
         $bookPrice = $book->price;
         $bookAvailableQty = $book->quantity;
-        $response = [];
+        $purchasePrice = null;
 
         if($bookPurchaseQty > $bookAvailableQty) {
-            $response = ['message' => 'Book quantity not available' , 'data'=> ''];
+            $purchasePrice = $bookPurchaseQty * $bookPrice;
         }
 
-        return $response;
+        return $purchasePrice;
     }
 }
