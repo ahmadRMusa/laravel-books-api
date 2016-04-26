@@ -7,11 +7,14 @@ class Purchase
      * Purchase book function
      *
      * @param $book \App\Book
-     * @param $invoice \App\Invoice
+     * @param $bookPurchaseQty integer
      * @return array
      */
-    public function purchaseBook($book , $invoice)
+    public function purchaseBook($book , $bookPurchaseQty)
     {
+        $bookPrice = $book->price;
+        $bookAvailableQty = $book->quantity;
+
         return ['message' => 'TEST' , 'data'=> 'DATA TEST'];
     }
 }
