@@ -42,15 +42,19 @@
                     <form name="frmInvoices" class="form-horizontal" novalidate="">
 
                         <div class="form-group">
-                            <label for="amount" class="col-sm-3 control-label">Title</label>
+                            <label for="books" class="col-sm-3 control-label">Select book</label>
                             <div class="col-sm-9">
-                                <input type="title" class="form-control" id="amount" name="amount"
-                                       placeholder="Amount" value="{{amount}}"
-                                       ng-model="invoice.amount" ng-required="true">
-                                        <span class="help-inline"
-                                              ng-show="frmInvoices.amount.$invalid && frmInvoices.amount.$touched">
-                                            Amount field is required
-                                        </span>
+                                <select name="books" id="books" ng-model="data.singleSelect">
+                                    <option value="">---Please select---</option>
+                                    <option ng-repeat="book in books" value="{{ book.id }}">
+                                        {{ book.title }}
+                                    </option>
+                                </select>
+
+                                <!--<span class="help-inline"-->
+                                      <!--ng-show="frmInvoices.amount.$invalid && frmInvoices.amount.$touched">-->
+                                    <!--Amount field is required-->
+                                <!--</span>-->
                             </div>
                         </div>
 
@@ -66,6 +70,19 @@
                                         </span>
                             </div>
                         </div>
+
+                        <!--<div class="form-group">-->
+                            <!--<label for="amount" class="col-sm-3 control-label">Title</label>-->
+                            <!--<div class="col-sm-9">-->
+                                <!--<input type="title" class="form-control" id="amount" name="amount"-->
+                                       <!--placeholder="Amount" value="{{amount}}"-->
+                                       <!--ng-model="invoice.amount" ng-required="true">-->
+                                        <!--<span class="help-inline"-->
+                                              <!--ng-show="frmInvoices.amount.$invalid && frmInvoices.amount.$touched">-->
+                                            <!--Amount field is required-->
+                                        <!--</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
 
                     </form>
                 </div>
