@@ -25,6 +25,7 @@ class Purchases extends Controller
         $purchasePrice = $purchaseService->purchaseBook($book,$purchaseQty);
 
         if($purchasePrice !== null) {
+            $book->quantity -= $purchaseQty;
             $invoice = new Invoice();
             $invoice->book_id = $book->id;
             $invoice->amount = $purchasePrice;
@@ -32,6 +33,7 @@ class Purchases extends Controller
             $invoice->created_at = date('Y-m-d H:i:s');
             $invoice->updated_at = date('Y-m-d H:i:s');
             $invoice->save();
+            $book->save();
         }
 
         return $invoice;
