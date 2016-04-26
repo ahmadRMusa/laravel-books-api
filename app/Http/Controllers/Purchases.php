@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Invoice;
+use App\Book;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Services\Purchase;
@@ -17,19 +18,16 @@ class Purchases extends Controller
      * @return Response
      */
     public function index(Request $request) {
+
         $invoice = new Invoice;
         $book = null;
         $purchaseService = new Purchase();
-        $purchaseResult = $purchaseService->purchaseBook($book);
-
-        $invoice->title = $request->input('title');
-        $invoice->author = $request->input('author');
-        $invoice->description = $request->input('description');
-        $invoice->reference = $request->input('reference');
-        $invoice->publication = $request->input('publication');
-        $invoice->price = $request->input('price');
         $invoice->qty = $request->input('qty');
+        $invoice->bookId = $request->input('book_id');
 
-        return Invoice::find(1);
+        $book = Invoice::find($invoice->bookId);
+        $purchaseResult = $purchaseService->purchaseBook($book,$invoice);
+
+        return $purchaseResult;
     }
 }

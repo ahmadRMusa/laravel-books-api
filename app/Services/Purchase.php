@@ -2,9 +2,16 @@
 
 class Purchase
 {
-    public function purchaseBook($book)
+    /**
+     *
+     * Purchase book function
+     *
+     * @param $book \App\Book
+     * @param $invoice \App\Invoice
+     * @return array
+     */
+    public function purchaseBook($book , $invoice)
     {
-        $invoice = null;
-        return $invoice;
+        return ['message' => 'TEST' , 'data'=> 'DATA TEST'];
     }
 }
