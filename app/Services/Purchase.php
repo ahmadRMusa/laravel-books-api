@@ -13,10 +13,10 @@ class Purchase
     public function purchaseBook($book , $bookPurchaseQty)
     {
         $bookPrice = $book->price;
-        $bookAvailableQty = $book->quantity;
+        $bookAvailableQty = intval($book->quantity);
         $purchasePrice = null;
 
-        if($bookPurchaseQty > $bookAvailableQty) {
+        if($bookAvailableQty >= $bookPurchaseQty) {
             $purchasePrice = $bookPurchaseQty * $bookPrice;
         }
 

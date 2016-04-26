@@ -20,7 +20,7 @@ class Purchases extends Controller
     public function index(Request $request) {
         $invoice = null;
         $purchaseService = new Purchase();
-        $purchaseQty = $request->input('qty');
+        $purchaseQty = intval($request->input('qty'));
         $book = Book::find($request->input('book_id'));
         $purchasePrice = $purchaseService->purchaseBook($book,$purchaseQty);
 
