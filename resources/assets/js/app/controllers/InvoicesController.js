@@ -7,8 +7,6 @@
 
         $scope.onlyNumbers = /^[1-9][0-9]*$/;
 
-        $scope.select = '';
-
         //Retrieve invoices from API
         $http.get(API_URL + "invoices")
             .success(function(response) {
@@ -43,7 +41,7 @@
             $http({
                 method: 'POST',
                 url: url,
-                data: $.param($scope.book),
+                data: $.param($scope.invoice),
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             }).success(function(response) {
                 console.log(response);
