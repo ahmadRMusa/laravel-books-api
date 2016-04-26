@@ -16,7 +16,7 @@ class Purchase
         $bookAvailableQty = intval($book->quantity);
         $purchasePrice = null;
 
-        if($bookAvailableQty >= $bookPurchaseQty) {
+        if($bookAvailableQty >= $bookPurchaseQty && $bookPurchaseQty > 0) {
             $purchasePrice = $bookPurchaseQty * $bookPrice;
         }
 
