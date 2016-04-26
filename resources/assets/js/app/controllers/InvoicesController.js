@@ -7,6 +7,8 @@
 
         $scope.onlyNumbers = /^[1-9][0-9]*$/;
 
+        $scope.select = '';
+
         //Retrieve invoices from API
         $http.get(API_URL + "invoices")
             .success(function(response) {
@@ -38,7 +40,7 @@
 
         //save new record / update existing record
         $scope.save = function(modalstate, id) {
-            var url = API_URL + "invoices";
+            var url = API_URL + "invoices/purchase";
 
             $http({
                 method: 'POST',

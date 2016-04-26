@@ -22,4 +22,4 @@ Route::delete('/api/v1/books/{id}', 'Books@destroy');
 
 Route::get('/api/v1/invoices/{id?}', 'Invoices@index');
 Route::post('/api/v1/invoices', 'Invoices@store');
-Route::post('/api/v1/invoices', 'Invoices@purchase');
+Route::post('/api/v1/invoices/purchase', 'Invoices@purchase');
