@@ -38,7 +38,7 @@
 
         //save new record / update existing record
         $scope.save = function(modalstate, id) {
-            var url = API_URL + "invoices/purchase";
+            var url = API_URL + "purchases";
 
             $http({
                 method: 'POST',
