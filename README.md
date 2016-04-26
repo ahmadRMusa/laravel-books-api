@@ -6,6 +6,9 @@ Books API Built in Laravel 5 and using AngularJS for front-end
 
 ```shell
 npm install -g gulp
+npm install -g bower
+bower install
+npm install
 php artisan migrate:refresh --seed --force
 gulp
 php artisan serve --port=8000
