@@ -21,7 +21,7 @@ class Purchases extends Controller
         $invoice = null;
         $purchaseService = new Purchase();
         $purchaseQty = $request->input('qty');
-        $book = Invoice::find($request->input('book_id'));
+        $book = Book::find($request->input('book_id'));
         $purchasePrice = $purchaseService->purchaseBook($book,$purchaseQty);
 
         if($purchasePrice !== null) {
