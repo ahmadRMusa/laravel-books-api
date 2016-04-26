@@ -18,10 +18,22 @@ class Purchases extends Controller
      * @return Response
      */
     public function index(Request $request) {
+        $invoice = null;
         $purchaseService = new Purchase();
+        $purchaseQty = $request->input('qty');
         $book = Invoice::find($request->input('book_id'));
-        $purchaseResult = $purchaseService->purchaseBook($book,$request->input('qty'));
+        $purchasePrice = $purchaseService->purchaseBook($book,$purchaseQty);
 
-        return $purchaseResult;
+        if($purchasePrice !== null) {
+            $invoice = new Invoice();
+            $invoice->book_id = $book->id;
+            $invoice->amount = $purchasePrice;
+            $invoice->qty = $purchaseQty;
+            $invoice->created_at = date('Y-m-d H:i:s');
+            $invoice->updated_at = date('Y-m-d H:i:s');
+            $invoice->save();
+        }
+
+        return $invoice;
     }
 }
