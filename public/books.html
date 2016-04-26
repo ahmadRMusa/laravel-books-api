@@ -139,7 +139,8 @@
                         <div class="form-group">
                             <label for="quantity" class="col-sm-3 control-label">Quantity</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="quantity" name="quantity"
+                                <input type="number" class="form-control" id="quantity" name="quantity"
+                                       ng-pattern="onlyNumbers"
                                        placeholder="Quantity" value="{{quantity}}"
                                        ng-model="book.quantity" ng-required="true">
                                     <span class="help-inline"

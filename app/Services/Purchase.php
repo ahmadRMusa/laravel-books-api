@@ -14,7 +14,12 @@ class Purchase
     {
         $bookPrice = $book->price;
         $bookAvailableQty = $book->quantity;
+        $response = [];
 
-        return ['message' => 'TEST' , 'data'=> 'DATA TEST'];
+        if($bookPurchaseQty > $bookAvailableQty) {
+            $response = ['message' => 'Book quantity not available' , 'data'=> ''];
+        }
+
+        return $response;
     }
 }

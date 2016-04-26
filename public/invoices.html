@@ -62,7 +62,8 @@
                         <div class="form-group error">
                             <label for="qty" class="col-sm-3 control-label">Book Quantity</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control has-error" id="qty" name="qty"
+                                <input type="number" class="form-control has-error" id="qty" name="qty"
+                                       ng-pattern="onlyNumbers"
                                        placeholder="Quantity" value="{{qty}}"
                                        ng-model="invoice.qty" ng-required="true">
                                         <span class="help-inline"

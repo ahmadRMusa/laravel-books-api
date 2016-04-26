@@ -5,7 +5,8 @@
 
     var BooksController = function($scope ,$http , $routeParams , API_URL){
 
-        $scope.onlyNumbers = /^(?:[1-9]\d*|0)?(?:\.\d+)?$/;
+        $scope.onlyDecimals = /^(?:[1-9]\d*|0)?(?:\.\d+)?$/;
+        $scope.onlyNumbers = /^[1-9][0-9]*$/;;
 
         //retrieve books from API
         $http.get(API_URL + "books")
