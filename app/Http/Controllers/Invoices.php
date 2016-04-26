@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Invoice;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Services\Purchase as Purchase;
 
 class Invoices extends Controller
 {
@@ -37,6 +38,23 @@ class Invoices extends Controller
     }
 
     /**
+     * Purchase book and generate invoice.
+     *
+     * @return Response
+     */
+    public function purchase(Request $request) {
+        $invoice = new Invoice;
+
+        $invoice->title = $request->input('title');
+        $invoice->author = $request->input('author');
+        $invoice->description = $request->input('description');
+        $invoice->reference = $request->input('reference');
+        $invoice->publication = $request->input('publication');
+        $invoice->price = $request->input('price');
+        $invoice->qty = $request->input('qty');
+    }
+
+    /**
      * Store new invoice resource in database.
      *
      * @param  Request  $request
@@ -48,7 +66,7 @@ class Invoices extends Controller
         $invoice->title = $request->input('title');
         $invoice->author = $request->input('author');
         $invoice->description = $request->input('description');
-        $invoice->reference = $request->input('description');
+        $invoice->reference = $request->input('reference');
         $invoice->publication = $request->input('publication');
         $invoice->price = $request->input('price');
         $invoice->qty = $request->input('qty');
